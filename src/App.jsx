@@ -1,5 +1,11 @@
 import React from 'react';
 import './App.css';
+import char from './portrait/0255.png';
+
+function ProfilePicture() {
+  // Import result is the URL of your image
+  return <img src={char} alt="Logo" />;
+}
 
 function TravelEmoji() {
   return <span class="material-icons-outlined">airplane_ticket</span>
@@ -18,7 +24,7 @@ function SelectCountry() {
 }
 
 function ApplyStyleCountry() {
-  return document.getElementById('CountryDropdown').style.backgroundColor = "orange";
+  // document.getElementById('CountryDropdown').style.backgroundColor = "orange";
 }
 
 // Start Date Selection
@@ -46,17 +52,34 @@ function NumberGuests() {
   return <div><label> Guests:</label><input type="number"></input></div>;
 }
 
+// Login Screen
+
+// function readHyperParameters() {
+//   document.getElementbyID('hp').innerHtml = 'asd';
+// }
+
+function TopNavigation() {
+  return <div class= "TopNavigation"> {ProfilePicture()} <div><span>David Ta</span> David Ta</div> </div>
+}
+
 function App() {
   return (
     <main>
+      {TopNavigation()}
       <h1><i> Oh the places you’ll go {TravelEmoji()} </i></h1>
       <div class= "TripNavigation">
-        {SelectCountry()} {ApplyStyleCountry()}
+        {SelectCountry()}
         {SelectStartDate()}
         {SelectEndDate()}
         {NumberGuests()}
       </div>
-      <button> <span class="material-icons-outlined">search</span></button>
+      <button onClick = "alert('hi')"> <span class="material-icons-outlined">search</span></button>
+        <div id = "hp">
+          select | select | select | select
+        </div>
+        <div class = "login">
+          Have an account? Log back in.
+        </div>
     </main>
   );
 }

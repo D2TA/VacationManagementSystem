@@ -15,11 +15,30 @@
 }
 
 .TripNavigation {
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: row;
 }
 
-.TripNavigation > * {
-  padding: 10px;
+.TripNavigation > *:not(:first-child) {
   flex: 50%;
+}
+
+.TopNavigation {
+  text-align: left;
+  align-content: left;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: black 1px solid; 
+}
+
+.TopNavigation > * {
+  vertical-align: middle;  
+}
+
+.TopNavigation > img {
+  border: 1px solid black;
+  border-radius: 100px;
 }
